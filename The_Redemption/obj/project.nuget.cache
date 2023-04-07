@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "KhAF8e5ZRzjvrsXIdJibpuPDXZLbw1wnLTjsDFTRLcoYXMOA1CKE52GNaMzTHzR6mfjKbJOtCerger0GRhvGOg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\arosenius.carlander\\Documents\\Redemption\\The_Redemption\\The_Redemption\\The_Redemption.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\arosenius.carlander\\.nuget\\packages\\raylib-cs\\4.2.0.2\\raylib-cs.4.2.0.2.nupkg.sha512",
+    "C:\\Users\\arosenius.carlander\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
