@@ -2,22 +2,17 @@
 global using Raylib_cs;
 global using System.Numerics;
 
-//Raylib.InitWindow(800, 600, "Sidescroller");
-//Raylib.SetTargetFPS(60);
-
-//int screenHeight = Raylib.GetScreenHeight();
-//int screenWidth = Raylib.GetScreenWidth();
-
 
 Raylib.InitWindow(800, 600, "Sidescroller");
 Raylib.SetTargetFPS(60);
 
-
+// Alla kalleser till de klasser de tillhör till
 
 Main cs = new Main();
 Room r1 = new Room();
 Enemy e1 = new Enemy();
 Enemy e2 = new Enemy();
+Enemy e3 = new Enemy();
 
 
 Camera camera = new Camera(cs);
@@ -34,37 +29,33 @@ while (!Raylib.WindowShouldClose() && cs.hp > 0)
     e1.rectangle.y = 40;
     e2.rectangle.x = 200;
     e2.rectangle.y = 450;
+    e3.rectangle.x = 2000;
+    e3.rectangle.y = 200;
+
 
     cs.movement(r1);
 
-    
-    // Raylib.BeginMode2D(camera.GetCamera2D());
 
     camera.update();
     
     cs.CheckCollision(e1);
     cs.CheckCollision(e2);
+    cs.CheckCollision(e3);
 
     Raylib.BeginDrawing();
     camera.BeginCamera();
 
-    // Raylib.BeginMode2D(cam);
     Raylib.ClearBackground(Color.DARKBLUE);
 
     cs.Draw();
     r1.Draw();
     e1.Draw();
     e2.Draw();
+    e3.Draw();
     
 
     camera.EndCamera();
-    // Raylib.EndMode2D();
+
 
     Raylib.EndDrawing();
 }
-
-
-
-// Console.WriteLine(cs.name);
-
-// Console.ReadLine();

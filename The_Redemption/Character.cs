@@ -23,11 +23,11 @@ public class Character
 
     }
 
+     //Ritar karaktären
     public void Draw()
     {
 
         Texture2D playerImage = Raylib.LoadTexture("piskel.png");
-       // Raylib.DrawRectangleRec(rect, Color.YELLOW);
         Raylib.DrawText($"{hp}", (int)rect.x + 30, (int)rect.y - 35, 20, Color.BLACK);
         Raylib.DrawTexture(playerImage, (int)rect.x, (int)rect.y, Color.WHITE);
 

@@ -9,7 +9,6 @@ public class Main : Character
     bool inair;
 
 
-
     public Main()
     {
         name = "Bert";
@@ -34,6 +33,7 @@ public class Main : Character
 
     public void movement(Room room)
     {
+           //rörelse för karaktären
 
         float xMovement = 0;
         float yMovement = 0;
@@ -49,15 +49,14 @@ public class Main : Character
 
         rect.x += xMovement;
 
+        //Gravitationen för karaktären
         Console.WriteLine(inair);
         gravity += acceleration;
-        // rect.y += yMovement;
         inair = true;
         for (int i = 0; i < room.wallRect.Count; i++)
         {
             if (Raylib.CheckCollisionRecs(rect, room.wallRect[i]))
             {
-                // Console.WriteLine("colliding");
                 inair = false;
                 gravity = 0;
             }
@@ -70,6 +69,7 @@ public class Main : Character
 
 
         rect.y += gravity;
+        
 
     }
 }

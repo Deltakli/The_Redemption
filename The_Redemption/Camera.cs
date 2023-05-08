@@ -6,7 +6,7 @@ public class Camera
 
     private Character TheMove;
 
-
+     //position för kameran
     Vector2 offset = new Vector2(35, -100);
     private Camera2D camera2D;
     public Camera(Character tgt)
@@ -34,14 +34,13 @@ public class Camera
     {
         return camera2D;
     }
-
+        
+        //konstanta updaterande kamera
     public void update()
     {
-        // camera2D.offset.X = 9000000;
+
         camera2D.target  = new Vector2(TheMove.rect.x + 55, TheMove.rect.y + 35);
-        /*Vector2 characterPos = TheMove.GetPosition();
-        camera2D.offset = characterPos + offset;
-        Console.WriteLine(characterPos);*/
+
     }
 
 }
